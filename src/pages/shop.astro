@@ -1,0 +1,161 @@
+---
+import Layout from '../layouts/Layout.astro';
+import MatrixRain from '../components/MatrixRain';
+import ScrambleText from '../components/ScrambleText';
+---
+
+<Layout title="SILENT CODE - Shop">
+    <div class="min-h-screen bg-black">
+        <MatrixRain client:load />
+        
+        <nav class="fixed top-0 w-full flex justify-between items-center px-8 py-4 z-50 bg-black/90">
+            <div class="font-mono text-2xl text-[#00ff00]">SILENT CODE</div>
+            <a href="/home" class="font-mono text-[#00ff00] hover:text-[#00ff00]/80">Back to Home</a>
+        </nav>
+
+        <div class="pt-24 px-8 pb-16 relative z-10">
+            <ScrambleText 
+					text="SILENT CODE Shop"
+					className="font-tech-mono text-5xl text-neon-green mb-4 text-shadow-lg"
+					client:load
+			/>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Penetration Testing -->
+                <div class="bg-black p-6 rounded border border-[#00ff00]/20 hover:border-[#00ff00] transition-all duration-300 hover:-translate-y-1 relative group">
+                    <div class="text-[#00ff00] text-xl mb-2 font-mono">Penetration Testing</div>
+                    <div class="text-[#00ff00]/60 mb-4 font-mono">Comprehensive security assessment</div>
+                    <ul class="text-sm text-[#00ff00]/50 mb-4 space-y-2 font-mono">
+                        <li>• Network vulnerability scanning</li>
+                        <li>• Web application testing</li>
+                        <li>• Social engineering assessment</li>
+                        <li>• Detailed report and remediation</li>
+                    </ul>
+                    <div class="text-[#00ff00] font-mono text-lg">Starting at $2,500</div>
+                    <button class="w-full mt-4 p-3 bg-black border border-[#00ff00] text-[#00ff00] font-mono hover:bg-[#00ff00] hover:text-black transition-all duration-300 rounded group-hover:animate-pulse">
+                        Request Quote
+                    </button>
+                </div>
+
+                <!-- Security Training -->
+                <div class="bg-black p-6 rounded border border-[#00ff00]/20 hover:border-[#00ff00] transition-all duration-300 hover:-translate-y-1 relative group">
+                    <div class="text-[#00ff00] text-xl mb-2 font-mono">Security Training</div>
+                    <div class="text-[#00ff00]/60 mb-4 font-mono">Expert-led training programs</div>
+                    <ul class="text-sm text-[#00ff00]/50 mb-4 space-y-2 font-mono">
+                        <li>• Employee security awareness</li>
+                        <li>• Secure coding practices</li>
+                        <li>• Incident response training</li>
+                        <li>• Custom curriculum</li>
+                    </ul>
+                    <div class="text-[#00ff00] font-mono text-lg">Starting at $1,500</div>
+                    <button class="w-full mt-4 p-3 bg-black border border-[#00ff00] text-[#00ff00] font-mono hover:bg-[#00ff00] hover:text-black transition-all duration-300 rounded group-hover:animate-pulse">
+                        Learn More
+                    </button>
+                </div>
+
+                <!-- Security Audit -->
+                <div class="bg-black p-6 rounded border border-[#00ff00]/20 hover:border-[#00ff00] transition-all duration-300 hover:-translate-y-1 relative group">
+                    <div class="text-[#00ff00] text-xl mb-2 font-mono">Security Audit</div>
+                    <div class="text-[#00ff00]/60 mb-4 font-mono">Infrastructure review</div>
+                    <ul class="text-sm text-[#00ff00]/50 mb-4 space-y-2 font-mono">
+                        <li>• Policy and procedure review</li>
+                        <li>• Compliance assessment</li>
+                        <li>• Risk analysis</li>
+                        <li>• Architecture review</li>
+                    </ul>
+                    <div class="text-[#00ff00] font-mono text-lg">Starting at $3,000</div>
+                    <button class="w-full mt-4 p-3 bg-black border border-[#00ff00] text-[#00ff00] font-mono hover:bg-[#00ff00] hover:text-black transition-all duration-300 rounded group-hover:animate-pulse">
+                        Contact Us
+                    </button>
+                </div>
+
+                <!-- Incident Response -->
+                <div class="bg-black p-6 rounded border border-[#00ff00]/20 hover:border-[#00ff00] transition-all duration-300 hover:-translate-y-1 relative group">
+                    <div class="text-[#00ff00] text-xl mb-2 font-mono">Incident Response</div>
+                    <div class="text-[#00ff00]/60 mb-4 font-mono">24/7 emergency response</div>
+                    <ul class="text-sm text-[#00ff00]/50 mb-4 space-y-2 font-mono">
+                        <li>• Immediate threat containment</li>
+                        <li>• Forensic investigation</li>
+                        <li>• System recovery</li>
+                        <li>• Post-incident analysis</li>
+                    </ul>
+                    <div class="text-[#00ff00] font-mono text-lg">Custom Pricing</div>
+                    <button class="w-full mt-4 p-3 bg-black border border-[#00ff00] text-[#00ff00] font-mono hover:bg-[#00ff00] hover:text-black transition-all duration-300 rounded group-hover:animate-pulse">
+                        Emergency Contact
+                    </button>
+                </div>
+
+                <!-- Custom Security Solutions -->
+                <div class="bg-black p-6 rounded border border-[#00ff00]/20 hover:border-[#00ff00] transition-all duration-300 hover:-translate-y-1 relative group">
+                    <div class="text-[#00ff00] text-xl mb-2 font-mono">Custom Solutions</div>
+                    <div class="text-[#00ff00]/60 mb-4 font-mono">Tailored implementations</div>
+                    <ul class="text-sm text-[#00ff00]/50 mb-4 space-y-2 font-mono">
+                        <li>• Custom security tools</li>
+                        <li>• Specialized testing</li>
+                        <li>• Bespoke training</li>
+                        <li>• Ongoing support</li>
+                    </ul>
+                    <div class="text-[#00ff00] font-mono text-lg">Contact for Details</div>
+                    <button class="w-full mt-4 p-3 bg-black border border-[#00ff00] text-[#00ff00] font-mono hover:bg-[#00ff00] hover:text-black transition-all duration-300 rounded group-hover:animate-pulse">
+                        Discuss Project
+                    </button>
+                </div>
+
+                <!-- Consultation -->
+                <div class="bg-black p-6 rounded border border-[#00ff00]/20 hover:border-[#00ff00] transition-all duration-300 hover:-translate-y-1 relative group">
+                    <div class="text-[#00ff00] text-xl mb-2 font-mono">Consultation</div>
+                    <div class="text-[#00ff00]/60 mb-4 font-mono">Expert consulting</div>
+                    <ul class="text-sm text-[#00ff00]/50 mb-4 space-y-2 font-mono">
+                        <li>• Strategy planning</li>
+                        <li>• Architecture review</li>
+                        <li>• Risk assessment</li>
+                        <li>• Tech recommendations</li>
+                    </ul>
+                    <div class="text-[#00ff00] font-mono text-lg">$200/hour</div>
+                    <button class="w-full mt-4 p-3 bg-black border border-[#00ff00] text-[#00ff00] font-mono hover:bg-[#00ff00] hover:text-black transition-all duration-300 rounded group-hover:animate-pulse">
+                        Book Session
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <footer class="py-8 text-center bg-black border-t border-[#00ff00]/20">
+            <p class="text-[#00ff00]/40 font-mono">For detailed pricing and custom solutions, contact our team</p>
+            <a href="mailto:contact@silentcode.com" class="text-[#00ff00] font-mono hover:text-[#00ff00]/80">
+                contact@silentcode.com
+            </a>
+        </footer>
+    </div>
+</Layout>
+
+<style>
+    .glitch-text {
+        text-shadow: 
+            0 0 10px rgba(0, 255, 0, 0.8),
+            2px 2px 2px rgba(0, 255, 0, 0.2);
+        animation: glitch 2s infinite;
+    }
+
+    @keyframes glitch {
+        0% {
+            text-shadow: 
+                0 0 10px rgba(0, 255, 0, 0.8),
+                2px 2px 2px rgba(0, 255, 0, 0.2);
+        }
+        20% {
+            text-shadow: 
+                -2px 0 rgba(0, 255, 0, 0.8),
+                2px 2px 2px rgba(0, 255, 0, 0.2);
+        }
+        40% {
+            text-shadow: 
+                2px 0 rgba(0, 255, 0, 0.8),
+                2px 2px 2px rgba(0, 255, 0, 0.2);
+        }
+        60% {
+            text-shadow: 
+                0 0 10px rgba(0, 255, 0, 0.8),
+                2px 2px 2px rgba(0, 255, 0, 0.2);
+        }
+    }
+</style>

@@ -1,0 +1,160 @@
+---
+import Layout from '../layouts/Layout.astro';
+import MatrixRain from '../components/MatrixRain';
+import ScrambleText from '../components/ScrambleText';
+import TypewriterText from '../components/TypewriterText';
+import ScrollLink from '../components/ScrollLink';
+import GoToTop from '../components/GoToTop';
+---
+
+<Layout title="SILENT CODE">
+	<div id="app" class="opacity-100">
+		<GoToTop client:load />
+		<header class="relative h-screen flex flex-col justify-center items-center text-center px-4 overflow-hidden bg-dark-bg">
+			<MatrixRain client:load />
+			<div class="absolute inset-0 w-[200%] h-[200%] bg-[repeating-linear-gradient(45deg,transparent,transparent_10px,rgba(0,255,0,0.1)_10px,rgba(0,255,0,0.1)_20px)] animate-background-move"></div>
+			
+			<nav class="fixed top-0 w-full flex justify-between items-center px-5% py-4 z-50 bg-dark-bg/90 backdrop-blur-md">
+				<div class="font-tech-mono text-2xl text-neon-green text-shadow-lg ml-4">SILENT CODE</div>
+				<ul class="flex gap-8 mr-4">
+					<li>
+						<ScrollLink href="#about" className="text-white hover:text-neon-green transition-colors" client:load>
+							About
+						</ScrollLink>
+					</li>
+					<li>
+						<ScrollLink href="#team" className="text-white hover:text-neon-green transition-colors" client:load>
+							Team
+						</ScrollLink>
+					</li>
+					<li>
+						<ScrollLink href="#contact" className="text-white hover:text-neon-green transition-colors" client:load>
+							Contact
+						</ScrollLink>
+					</li>
+					<li><a href="/shop" class="text-white hover:text-neon-green transition-colors">Shop</a></li>
+				</ul>
+			</nav>
+
+			<div class="relative z-10">
+				<ScrambleText 
+					text="SILENT CODE Team"
+					className="font-tech-mono text-5xl text-neon-green mb-4 text-shadow-lg"
+					client:load
+				/>
+				<TypewriterText 
+					text="Three Experts pushing the boundaries of digital security"
+					className="text-xl font-tech-mono text-white"
+					delay={50}
+					client:load
+				/>
+			</div>
+		</header>
+
+		<section id="about" class="py-20 px-10% text-center bg-dark-bg">
+			<h2 class="font-tech-mono text-4xl text-neon-green mb-8 text-shadow-lg">About Us</h2>
+			<p class="max-w-2xl mx-auto">We are a team of elite cybersecurity professionals dedicated to protecting digital assets and uncovering vulnerabilities before they can be exploited.</p>
+		</section>
+
+		<section id="team" class="py-20 px-10% bg-dark-bg">
+			<h2 class="font-tech-mono text-4xl text-neon-green mb-12 text-center text-shadow-lg">Our Team</h2>
+			<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+				<div class="bg-black/30 p-8 rounded-lg text-center transition-transform hover:-translate-y-2.5 border border-neon-green/10 hover:border-neon-green  cursor-pointer">
+					<div class="w-48 h-48 mx-auto mb-6 rounded-full overflow-hidden border-4 border-neon-green">
+						<img src="https://via.placeholder.com/200" alt="Team Member 1" class="w-full h-full object-cover" />
+					</div>
+					<h3 class="font-tech-mono text-2xl text-neon-green mb-2">Alex "Ghost" Chen</h3>
+					<p class="text-neon-blue mb-4">Penetration Tester</p>
+					<div class="flex flex-wrap gap-2 justify-center">
+						<span class="bg-neon-green/10 px-3 py-1 rounded-full text-sm text-neon-green">Network Security</span>
+						<span class="bg-neon-green/10 px-3 py-1 rounded-full text-sm text-neon-green">Web App Testing</span>
+						<span class="bg-neon-green/10 px-3 py-1 rounded-full text-sm text-neon-green">Social Engineering</span>
+					</div>
+				</div>
+
+				<div class="bg-black/30 p-8 rounded-lg text-center transition-transform hover:-translate-y-2.5 border border-neon-green/10 hover:border-neon-green  cursor-pointer">
+					<div class="w-48 h-48 mx-auto mb-6 rounded-full overflow-hidden border-4 border-neon-green">
+						<img src="https://via.placeholder.com/200" alt="Team Member 2" class="w-full h-full object-cover" />
+					</div>
+					<h3 class="font-tech-mono text-2xl text-neon-green mb-2">Sarah "Shadow" Martinez</h3>
+					<p class="text-neon-blue mb-4">Reverse Engineer</p>
+					<div class="flex flex-wrap gap-2 justify-center">
+						<span class="bg-neon-green/10 px-3 py-1 rounded-full text-sm text-neon-green">Malware Analysis</span>
+						<span class="bg-neon-green/10 px-3 py-1 rounded-full text-sm text-neon-green">Binary Exploitation</span>
+						<span class="bg-neon-green/10 px-3 py-1 rounded-full text-sm text-neon-green">Cryptography</span>
+					</div>
+				</div>
+
+				<div class="bg-black/30 p-8 rounded-lg text-center transition-transform hover:-translate-y-2.5 border border-neon-green/10 hover:border-neon-green  cursor-pointer">
+					<div class="w-48 h-48 mx-auto mb-6 rounded-full overflow-hidden border-4 border-neon-green">
+						<img src="https://via.placeholder.com/200" alt="Team Member 3" class="w-full h-full object-cover" />
+					</div>
+					<h3 class="font-tech-mono text-2xl text-neon-green mb-2">Marcus "Phantom" Johnson</h3>
+					<p class="text-neon-blue mb-4">Security Architect</p>
+					<div class="flex flex-wrap gap-2 justify-center">
+						<span class="bg-neon-green/10 px-3 py-1 rounded-full text-sm text-neon-green">System Design</span>
+						<span class="bg-neon-green/10 px-3 py-1 rounded-full text-sm text-neon-green">Cloud Security</span>
+						<span class="bg-neon-green/10 px-3 py-1 rounded-full text-sm text-neon-green">Threat Modeling</span>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<section id="contact" class="py-20 px-10% bg-dark-bg">
+			<h2 class="font-tech-mono text-4xl text-neon-green mb-12 text-center text-shadow-lg">Get in Touch</h2>
+			<div class="max-w-2xl mx-auto">
+				<form class="flex flex-col gap-4">
+					<input type="text" placeholder="Name" required class="p-4 bg-black/30 border border-neon-green/10 rounded-lg text-white focus:outline-none focus:border-neon-green" />
+					<input type="email" placeholder="Email" required class="p-4 bg-black/30 border border-neon-green/10 rounded-lg text-white focus:outline-none focus:border-neon-green" />
+					<textarea placeholder="Message" required class="p-4 bg-black/30 border border-neon-green/10 rounded-lg text-white h-40 resize-y focus:outline-none focus:border-neon-green"></textarea>
+					<button type="submit" class="p-4 bg-neon-green text-dark-bg font-tech-mono font-bold rounded-lg transition-all hover:bg-neon-green/80 hover:-translate-y-0.5 cursor-pointer">Send Message</button>
+				</form>
+			</div>
+		</section>
+
+		<footer class="py-8 text-center bg-dark-bg border-t border-neon-green/10">
+			<div class="mb-4">
+				<a href="#" class="text-white text-2xl mx-4 hover:text-neon-green transition-colors"><i class="fab fa-github"></i></a>
+				<a href="#" class="text-white text-2xl mx-4 hover:text-neon-green transition-colors"><i class="fab fa-linkedin"></i></a>
+				<a href="#" class="text-white text-2xl mx-4 hover:text-neon-green transition-colors"><i class="fab fa-twitter"></i></a>
+			</div>
+			<p>&copy; 2024 EliteHack. All rights reserved.</p>
+		</footer>
+	</div>
+</Layout>
+
+<style>
+	.text-shadow-lg {
+		text-shadow: 0 0 10px rgba(0, 255, 0, 0.5);
+	}
+
+	@keyframes glitch {
+		0% {
+			transform: translate(0);
+		}
+		20% {
+			transform: translate(-2px, 2px);
+		}
+		40% {
+			transform: translate(-2px, -2px);
+		}
+		60% {
+			transform: translate(2px, 2px);
+		}
+		80% {
+			transform: translate(2px, -2px);
+		}
+		100% {
+			transform: translate(0);
+		}
+	}
+
+	@keyframes background-move {
+		0% {
+			transform: translateX(0);
+		}
+		100% {
+			transform: translateX(-50%);
+		}
+	}
+</style>

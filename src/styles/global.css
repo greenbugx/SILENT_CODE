@@ -1,0 +1,23 @@
+@import "tailwindcss";
+
+@theme {
+    /*colors*/
+    --color-neon-green: #00ff00;
+    --color-neon-blue: #00ffff;
+    --color-dark-bg: #000;
+
+    /*fonts*/
+    --font-tech-mono: 'Share Tech Mono', 'monospace';
+    --font-space-mono: 'Space Mono', 'monospace';
+    
+    /*animations*/
+    --animate-background-move: backgroundMove 20s linear infinite;
+    @keyframes backgroundMove {
+        0% {
+            transform: translate(-50%, -50%) rotate(0deg);
+        }
+        100% {
+            transform: translate(-50%, -50%) rotate(360deg);
+        }
+    }
+}

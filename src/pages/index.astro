@@ -1,11 +1,21 @@
 ---
-import Welcome from '../components/Welcome.astro';
-import Layout from '../layouts/Layout.astro';
-
-// Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
-// Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
+import LoadingLayout from '../layouts/LoadingLayout.astro';
+import LoadingScreen from '../components/LoadingScreen';
 ---
 
-<Layout>
-	<Welcome />
-</Layout>
+<LoadingLayout title="SILENT CODE - Initializing">
+    <!-- Preload critical assets -->
+    <link rel="preload" href="/components/MatrixRain.js" as="script" crossorigin="anonymous">
+    <link rel="preload" href="/components/ScrambleText.js" as="script" crossorigin="anonymous">
+    <link rel="preload" href="/components/TypewriterText.js" as="script" crossorigin="anonymous">
+    <link rel="prefetch" href="/home">
+
+    <div class="fixed inset-0 flex items-center justify-center">
+        <LoadingScreen 
+            client:only="react"
+            onLoadComplete={() => {
+                window.location.replace('/home');
+            }}
+        />
+    </div>
+</LoadingLayout> 
