@@ -1,6 +1,6 @@
 <p align="center">
   <a href="#">
-    <img src="https://img.shields.io/badge/Springfield_Haven_SMP-GreenBugX-8A2BE2?style=for-the-badge&logo=insects&logoColor=white&labelColor=darkgreen&color=green&labelWidth=400&logoWidth=40" alt="Scrape!" style="transform: scale(1.5); margin: 10px 0;" />
+    <img src="https://img.shields.io/badge/SILENT_CODE-GreenBugX-8A2BE2?style=for-the-badge&logo=insects&logoColor=white&labelColor=darkgreen&color=green&labelWidth=400&logoWidth=40" alt="Scrape!" style="transform: scale(1.5); margin: 10px 0;" />
   </a>
 </p>
 
