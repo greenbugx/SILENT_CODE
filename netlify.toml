@@ -4,6 +4,6 @@
 
 [[redirects]]
   from = "/*"
-  to = "/.netlify/functions/entry"
+  to = "./netlify/functions/entry"
   status = 200
   force = true 
