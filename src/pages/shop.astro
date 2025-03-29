@@ -10,19 +10,19 @@ import ScrambleText from '../components/ScrambleText';
         
         <nav class="fixed top-0 w-full flex justify-between items-center px-8 py-4 z-50 bg-black/90">
             <div class="font-mono text-2xl text-[#00ff00]">SILENT CODE</div>
-            <a href="/home" class="font-mono text-[#00ff00] hover:text-[#00ff00]/80">Back to Home</a>
+            <a href="/home" class="font-mono text-white hover:text-[#00ff00]">Back to Home</a>
         </nav>
 
         <div class="pt-24 px-8 pb-16 relative z-10">
             <ScrambleText 
 					text="SILENT CODE Shop"
-					className="font-tech-mono text-5xl text-neon-green mb-4 text-shadow-lg"
+					className="font-tech-mono text-center text-3xl md:text-5xl text-neon-green mb-4 text-shadow-lg"
 					client:load
 			/>
             
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                 <!-- Penetration Testing -->
-                <div class="bg-black p-6 rounded border border-[#00ff00]/20 hover:border-[#00ff00] transition-all duration-300 hover:-translate-y-1 relative group">
+                <div class="product-card opacity-0 translate-y-4 bg-black p-6 rounded border border-[#00ff00]/20 hover:border-[#00ff00] transition-all duration-300 hover:-translate-y-1 relative group cursor-pointer">
                     <div class="text-[#00ff00] text-xl mb-2 font-mono">Penetration Testing</div>
                     <div class="text-[#00ff00]/60 mb-4 font-mono">Comprehensive security assessment</div>
                     <ul class="text-sm text-[#00ff00]/50 mb-4 space-y-2 font-mono">
@@ -32,13 +32,13 @@ import ScrambleText from '../components/ScrambleText';
                         <li>• Detailed report and remediation</li>
                     </ul>
                     <div class="text-[#00ff00] font-mono text-lg">Starting at $2,500</div>
-                    <button class="w-full mt-4 p-3 bg-black border border-[#00ff00] text-[#00ff00] font-mono hover:bg-[#00ff00] hover:text-black transition-all duration-300 rounded group-hover:animate-pulse">
-                        Request Quote
+                    <button class="w-full mt-4 p-3 bg-black border border-[#00ff00] text-[#00ff00] font-mono hover:bg-[#00ff00] hover:text-black transition-all duration-300 rounded group-hover:animate-pulse cursor-pointer">
+                        Buy now
                     </button>
                 </div>
 
                 <!-- Security Training -->
-                <div class="bg-black p-6 rounded border border-[#00ff00]/20 hover:border-[#00ff00] transition-all duration-300 hover:-translate-y-1 relative group">
+                <div class="product-card opacity-0 translate-y-4 bg-black p-6 rounded border border-[#00ff00]/20 hover:border-[#00ff00] transition-all duration-300 hover:-translate-y-1 relative group cursor-pointer">
                     <div class="text-[#00ff00] text-xl mb-2 font-mono">Security Training</div>
                     <div class="text-[#00ff00]/60 mb-4 font-mono">Expert-led training programs</div>
                     <ul class="text-sm text-[#00ff00]/50 mb-4 space-y-2 font-mono">
@@ -48,13 +48,13 @@ import ScrambleText from '../components/ScrambleText';
                         <li>• Custom curriculum</li>
                     </ul>
                     <div class="text-[#00ff00] font-mono text-lg">Starting at $1,500</div>
-                    <button class="w-full mt-4 p-3 bg-black border border-[#00ff00] text-[#00ff00] font-mono hover:bg-[#00ff00] hover:text-black transition-all duration-300 rounded group-hover:animate-pulse">
-                        Learn More
+                    <button class="w-full mt-4 p-3 bg-black border border-[#00ff00] text-[#00ff00] font-mono hover:bg-[#00ff00] hover:text-black transition-all duration-300 rounded group-hover:animate-pulse cursor-pointer">
+                        Buy now
                     </button>
                 </div>
 
                 <!-- Security Audit -->
-                <div class="bg-black p-6 rounded border border-[#00ff00]/20 hover:border-[#00ff00] transition-all duration-300 hover:-translate-y-1 relative group">
+                <div class="product-card opacity-0 translate-y-4 bg-black p-6 rounded border border-[#00ff00]/20 hover:border-[#00ff00] transition-all duration-300 hover:-translate-y-1 relative group cursor-pointer">
                     <div class="text-[#00ff00] text-xl mb-2 font-mono">Security Audit</div>
                     <div class="text-[#00ff00]/60 mb-4 font-mono">Infrastructure review</div>
                     <ul class="text-sm text-[#00ff00]/50 mb-4 space-y-2 font-mono">
@@ -64,13 +64,13 @@ import ScrambleText from '../components/ScrambleText';
                         <li>• Architecture review</li>
                     </ul>
                     <div class="text-[#00ff00] font-mono text-lg">Starting at $3,000</div>
-                    <button class="w-full mt-4 p-3 bg-black border border-[#00ff00] text-[#00ff00] font-mono hover:bg-[#00ff00] hover:text-black transition-all duration-300 rounded group-hover:animate-pulse">
-                        Contact Us
+                    <button class="w-full mt-4 p-3 bg-black border border-[#00ff00] text-[#00ff00] font-mono hover:bg-[#00ff00] hover:text-black transition-all duration-300 rounded group-hover:animate-pulse cursor-pointer">
+                        Buy now
                     </button>
                 </div>
 
                 <!-- Incident Response -->
-                <div class="bg-black p-6 rounded border border-[#00ff00]/20 hover:border-[#00ff00] transition-all duration-300 hover:-translate-y-1 relative group">
+                <div class="product-card opacity-0 translate-y-4 bg-black p-6 rounded border border-[#00ff00]/20 hover:border-[#00ff00] transition-all duration-300 hover:-translate-y-1 relative group cursor-pointer">
                     <div class="text-[#00ff00] text-xl mb-2 font-mono">Incident Response</div>
                     <div class="text-[#00ff00]/60 mb-4 font-mono">24/7 emergency response</div>
                     <ul class="text-sm text-[#00ff00]/50 mb-4 space-y-2 font-mono">
@@ -79,14 +79,14 @@ import ScrambleText from '../components/ScrambleText';
                         <li>• System recovery</li>
                         <li>• Post-incident analysis</li>
                     </ul>
-                    <div class="text-[#00ff00] font-mono text-lg">Custom Pricing</div>
-                    <button class="w-full mt-4 p-3 bg-black border border-[#00ff00] text-[#00ff00] font-mono hover:bg-[#00ff00] hover:text-black transition-all duration-300 rounded group-hover:animate-pulse">
-                        Emergency Contact
+                    <div class="text-[#00ff00] font-mono text-lg">$300</div>
+                    <button class="w-full mt-4 p-3 bg-black border border-[#00ff00] text-[#00ff00] font-mono hover:bg-[#00ff00] hover:text-black transition-all duration-300 rounded group-hover:animate-pulse cursor-pointer">
+                        Buy now
                     </button>
                 </div>
 
                 <!-- Custom Security Solutions -->
-                <div class="bg-black p-6 rounded border border-[#00ff00]/20 hover:border-[#00ff00] transition-all duration-300 hover:-translate-y-1 relative group">
+                <div class="product-card opacity-0 translate-y-4 bg-black p-6 rounded border border-[#00ff00]/20 hover:border-[#00ff00] transition-all duration-300 hover:-translate-y-1 relative group cursor-pointer">
                     <div class="text-[#00ff00] text-xl mb-2 font-mono">Custom Solutions</div>
                     <div class="text-[#00ff00]/60 mb-4 font-mono">Tailored implementations</div>
                     <ul class="text-sm text-[#00ff00]/50 mb-4 space-y-2 font-mono">
@@ -95,14 +95,14 @@ import ScrambleText from '../components/ScrambleText';
                         <li>• Bespoke training</li>
                         <li>• Ongoing support</li>
                     </ul>
-                    <div class="text-[#00ff00] font-mono text-lg">Contact for Details</div>
-                    <button class="w-full mt-4 p-3 bg-black border border-[#00ff00] text-[#00ff00] font-mono hover:bg-[#00ff00] hover:text-black transition-all duration-300 rounded group-hover:animate-pulse">
-                        Discuss Project
+                    <div class="text-[#00ff00] font-mono text-lg">$520</div>
+                    <button class="w-full mt-4 p-3 bg-black border border-[#00ff00] text-[#00ff00] font-mono hover:bg-[#00ff00] hover:text-black transition-all duration-300 rounded group-hover:animate-pulse cursor-pointer">
+                        Buy now
                     </button>
                 </div>
 
                 <!-- Consultation -->
-                <div class="bg-black p-6 rounded border border-[#00ff00]/20 hover:border-[#00ff00] transition-all duration-300 hover:-translate-y-1 relative group">
+                <div class="product-card opacity-0 translate-y-4 bg-black p-6 rounded border border-[#00ff00]/20 hover:border-[#00ff00] transition-all duration-300 hover:-translate-y-1 relative group cursor-pointer">
                     <div class="text-[#00ff00] text-xl mb-2 font-mono">Consultation</div>
                     <div class="text-[#00ff00]/60 mb-4 font-mono">Expert consulting</div>
                     <ul class="text-sm text-[#00ff00]/50 mb-4 space-y-2 font-mono">
@@ -112,8 +112,8 @@ import ScrambleText from '../components/ScrambleText';
                         <li>• Tech recommendations</li>
                     </ul>
                     <div class="text-[#00ff00] font-mono text-lg">$200/hour</div>
-                    <button class="w-full mt-4 p-3 bg-black border border-[#00ff00] text-[#00ff00] font-mono hover:bg-[#00ff00] hover:text-black transition-all duration-300 rounded group-hover:animate-pulse">
-                        Book Session
+                    <button class="w-full mt-4 p-3 bg-black border border-[#00ff00] text-[#00ff00] font-mono hover:bg-[#00ff00] hover:text-black transition-all duration-300 rounded group-hover:animate-pulse cursor-pointer">
+                        Buy now
                     </button>
                 </div>
             </div>
@@ -128,7 +128,38 @@ import ScrambleText from '../components/ScrambleText';
     </div>
 </Layout>
 
+<script>
+    // Intersection Observer for fade-in animation
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach((entry, index) => {
+            if (entry.isIntersecting) {
+                // Add delay based on index for staggered animation
+                setTimeout(() => {
+                    entry.target.classList.add('fade-in');
+                }, index * 200); // 200ms delay between each card
+            }
+        });
+    }, {
+        threshold: 0.1,
+        rootMargin: '50px'
+    });
+
+    // Observe all product cards
+    document.querySelectorAll('.product-card').forEach(card => {
+        observer.observe(card);
+    });
+</script>
+
 <style>
+    .product-card {
+        transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+    }
+
+    .product-card.fade-in {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
     .glitch-text {
         text-shadow: 
             0 0 10px rgba(0, 255, 0, 0.8),
