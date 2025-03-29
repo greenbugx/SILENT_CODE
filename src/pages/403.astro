@@ -1,0 +1,265 @@
+---
+import Layout from '../layouts/Layout.astro';
+import MatrixRain from '../components/MatrixRain';
+
+// Mark this page as server-rendered
+export const prerender = false;
+---
+
+<Layout title="403 - Forbidden">
+    <div class="min-h-screen bg-black relative overflow-hidden">
+        <MatrixRain client:load />
+        
+        <div class="absolute inset-0 flex flex-col items-center justify-center text-center px-4 z-10">
+            <div class="space-y-8">
+                <!-- 403 Text with Glitch Effect -->
+                <div class="relative">
+                    <h1 class="text-9xl font-mono text-[#00ff00] glitch-text">403</h1>
+                    <div class="absolute inset-0 text-9xl font-mono text-[#00ff00]/20 glitch-text glitch-text--before">403</div>
+                    <div class="absolute inset-0 text-9xl font-mono text-[#00ff00]/20 glitch-text glitch-text--after">403</div>
+                </div>
+
+                <!-- Security Scan Animation -->
+                <div class="relative h-2 w-64 mx-auto bg-black border border-[#00ff00] overflow-hidden">
+                    <div class="absolute top-0 left-0 h-full w-1/4 bg-[#00ff00] animate-scan"></div>
+                </div>
+
+                <!-- Error Message -->
+                <div class="space-y-4">
+                    <h2 class="text-2xl font-mono text-[#00ff00]" id="error-title">ERROR: SECURITY BREACH DETECTED</h2>
+                    <div class="space-y-2 text-[#00ff00]/60 font-mono max-w-md mx-auto" id="error-message">
+                        <p>Analyzing suspicious activity...</p>
+                    </div>
+                </div>
+
+                <!-- Security Details -->
+                <div class="bg-black/50 border border-[#00ff00]/30 p-4 rounded-lg max-w-md mx-auto">
+                    <div class="space-y-2 text-left" id="security-details">
+                        <p class="text-[#00ff00]/80 font-mono text-sm">Security Protocol: ACTIVE</p>
+                        <p class="text-[#00ff00]/80 font-mono text-sm">Threat Level: ANALYZING</p>
+                        <p class="text-[#00ff00]/80 font-mono text-sm">IP Status: SCANNING</p>
+                    </div>
+                </div>
+
+                <!-- Navigation Buttons -->
+                <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                    <a href="mailto:security@silentcode.com" class="px-8 py-3 bg-black border border-[#00ff00] text-[#00ff00] font-mono hover:bg-[#00ff00] hover:text-black transition-all duration-300 rounded cursor-pointer">
+                        CONTACT US
+                    </a>
+                </div>
+
+                <!-- ASCII Art -->
+                <pre class="text-[#00ff00]/20 font-mono text-xs mt-12">
+███████╗██╗██╗     ███████╗███╗   ██╗████████╗     ██████╗ ██████╗ ██████╗ ███████╗
+██╔════╝██║██║     ██╔════╝████╗  ██║╚══██╔══╝    ██╔════╝██╔═══██╗██╔══██╗██╔════╝
+███████╗██║██║     █████╗  ██╔██╗ ██║   ██║       ██║     ██║   ██║██║  ██║█████╗  
+╚════██║██║██║     ██╔══╝  ██║╚██╗██║   ██║       ██║     ██║   ██║██║  ██║██╔══╝  
+███████║██║███████╗███████╗██║ ╚████║   ██║       ╚██████╗╚██████╔╝██████╔╝███████╗
+╚══════╝╚═╝╚══════╝╚══════╝╚═╝  ╚═══╝   ╚═╝        ╚═════╝ ╚═════╝ ╚═════╝ ╚══════╝
+                </pre>
+            </div>
+        </div>
+    </div>
+</Layout>
+
+<script>
+    interface SecurityDetails {
+        protocol: string;
+        threat: string;
+        status: string;
+    }
+
+    interface SecurityScenario {
+        title: string;
+        message: string;
+        details: SecurityDetails;
+    }
+
+    // Map security check reasons to display scenarios
+    const securityScenarios: Record<string, SecurityScenario> = {
+        'RATE_LIMIT_EXCEEDED': {
+            title: "ERROR: RATE LIMIT EXCEEDED",
+            message: "Too many requests detected from your IP address.",
+            details: {
+                protocol: "RATE LIMITING ACTIVE",
+                threat: "HIGH",
+                status: "BLOCKED"
+            }
+        },
+        'SUSPICIOUS_USER_AGENT': {
+            title: "ERROR: SUSPICIOUS USER AGENT",
+            message: "Automated access attempt detected.",
+            details: {
+                protocol: "BOT PROTECTION ACTIVE",
+                threat: "MEDIUM",
+                status: "BLOCKED"
+            }
+        },
+        'BRUTE_FORCE_ATTEMPT': {
+            title: "ERROR: BRUTE FORCE ATTEMPT",
+            message: "Multiple failed authentication attempts detected.",
+            details: {
+                protocol: "AUTH PROTECTION ACTIVE",
+                threat: "HIGH",
+                status: "LOCKED"
+            }
+        },
+        'DDOS_ATTEMPT': {
+            title: "ERROR: DDoS ATTEMPT DETECTED",
+            message: "Multiple rapid requests detected from your IP address.",
+            details: {
+                protocol: "DDoS PROTECTION ACTIVE",
+                threat: "HIGH",
+                status: "BLOCKED"
+            }
+        }
+    };
+
+    // Function to update the page with security information
+    function updateSecurityInfo(scenario: SecurityScenario): void {
+        const errorTitle = document.getElementById('error-title') as HTMLElement;
+        const errorMessage = document.getElementById('error-message') as HTMLElement;
+        const securityDetails = document.getElementById('security-details') as HTMLElement;
+
+        if (!errorTitle || !errorMessage || !securityDetails) {
+            console.error('Required elements not found');
+            return;
+        }
+
+        errorTitle.textContent = scenario.title;
+        errorMessage.innerHTML = `<p>${scenario.message}</p>`;
+        
+        securityDetails.innerHTML = `
+            <p class="text-[#00ff00]/80 font-mono text-sm">Security Protocol: ${scenario.details.protocol}</p>
+            <p class="text-[#00ff00]/80 font-mono text-sm">Threat Level: ${scenario.details.threat}</p>
+            <p class="text-[#00ff00]/80 font-mono text-sm">IP Status: ${scenario.details.status}</p>
+        `;
+    }
+
+    // Check security status
+    async function checkSecurityStatus() {
+        try {
+            const response = await fetch('/api/security-check', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                }
+            });
+
+            const data = await response.json();
+            
+            if (data.blocked && data.reason in securityScenarios) {
+                updateSecurityInfo(securityScenarios[data.reason]);
+            } else {
+                // If not blocked, redirect to home
+                window.location.href = '/home';
+            }
+        } catch (error) {
+            console.error('Security check failed:', error);
+            // Show generic error if security check fails
+            updateSecurityInfo({
+                title: "ERROR: SECURITY CHECK FAILED",
+                message: "Unable to verify security status.",
+                details: {
+                    protocol: "ERROR",
+                    threat: "UNKNOWN",
+                    status: "ERROR"
+                }
+            });
+        }
+    }
+
+    // Run security check after a short delay
+    setTimeout(checkSecurityStatus, 2000);
+</script>
+
+<style>
+    .glitch-text {
+        position: relative;
+        animation: glitch 1s infinite;
+    }
+
+    .glitch-text--before,
+    .glitch-text--after {
+        content: attr(data-text);
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+    }
+
+    .glitch-text--before {
+        left: 2px;
+        text-shadow: -2px 0 #ff00ff;
+        animation: glitch-1 2s infinite linear alternate-reverse;
+    }
+
+    .glitch-text--after {
+        left: -2px;
+        text-shadow: 2px 0 #00ffff;
+        animation: glitch-2 3s infinite linear alternate-reverse;
+    }
+
+    @keyframes glitch {
+        0% {
+            text-shadow: 0.05em 0 0 #00fffc, -0.03em -0.04em 0 #fc00ff,
+                         0.025em 0.04em 0 #fffc00;
+        }
+        15% {
+            text-shadow: 0.05em 0 0 #00fffc, -0.03em -0.04em 0 #fc00ff,
+                         0.025em 0.04em 0 #fffc00;
+        }
+        16% {
+            text-shadow: -0.05em -0.025em 0 #00fffc, 0.025em 0.035em 0 #fc00ff,
+                         -0.05em -0.05em 0 #fffc00;
+        }
+        49% {
+            text-shadow: -0.05em -0.025em 0 #00fffc, 0.025em 0.035em 0 #fc00ff,
+                         -0.05em -0.05em 0 #fffc00;
+        }
+        50% {
+            text-shadow: 0.05em 0.035em 0 #00fffc, 0.03em 0 0 #fc00ff,
+                         0 -0.04em 0 #fffc00;
+        }
+        99% {
+            text-shadow: 0.05em 0.035em 0 #00fffc, 0.03em 0 0 #fc00ff,
+                         0 -0.04em 0 #fffc00;
+        }
+        100% {
+            text-shadow: -0.05em 0 0 #00fffc, -0.025em -0.04em 0 #fc00ff,
+                         -0.04em -0.025em 0 #fffc00;
+        }
+    }
+
+    @keyframes glitch-1 {
+        0% {
+            clip-path: inset(20% 0 30% 0);
+        }
+        100% {
+            clip-path: inset(50% 0 60% 0);
+        }
+    }
+
+    @keyframes glitch-2 {
+        0% {
+            clip-path: inset(40% 0 43% 0);
+        }
+        100% {
+            clip-path: inset(25% 0 58% 0);
+        }
+    }
+
+    @keyframes scan {
+        0% {
+            transform: translateX(-100%);
+        }
+        100% {
+            transform: translateX(400%);
+        }
+    }
+
+    .animate-scan {
+        animation: scan 2s linear infinite;
+    }
+</style>
