@@ -37,15 +37,15 @@ export default function MatrixRain() {
         const y = drops[i] * fontSize;
 
         // Head of the drop
-        context.fillStyle = '#0f0'; // Bright green for the head
+        context.fillStyle = '#FF0F0F'; // Bright red for the head
         context.fillText(text, x, y);
 
         // Trail effect
-        context.fillStyle = '#0f0';
+        context.fillStyle = '#FF0F0F';
         for (let j = 1; j < 5; j++) {
           const trailY = y - (j * fontSize);
           if (trailY > 0) {
-            context.fillStyle = `rgba(0, 255, 0, ${1 - (j * 0.2)})`;
+            context.fillStyle = `rgba(255, 0, 0, ${1 - (j * 0.2)})`;
             context.fillText(Math.random() > 0.5 ? '1' : '0', x, trailY);
           }
         }

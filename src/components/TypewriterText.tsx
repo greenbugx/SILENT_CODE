@@ -11,7 +11,7 @@ export default function TypewriterText({
   text, 
   className = '', 
   delay = 50,
-  cursorColor = '#0f0'
+  cursorColor = '#FF0F0F'
 }: Props) {
   const [displayText, setDisplayText] = useState('');
   const [isTypingComplete, setIsTypingComplete] = useState(false);
@@ -55,7 +55,7 @@ export default function TypewriterText({
             transition: 'opacity 0.1s'
           }}
         >
-          ▋
+          <b>$</b>
         </span>
       )}
     </span>

@@ -1,0 +1,108 @@
+---
+import Layout from '../layouts/Layout.astro';
+import MatrixRain from '../components/MatrixRain';
+import ScrambleText from '../components/ScrambleText';
+---
+
+<Layout title="SILENT CODE - Tools">
+    <div class="min-h-screen bg-black">
+        <MatrixRain client:load />
+        
+        <nav class="fixed top-0 w-full flex justify-between items-center px-8 py-4 z-50 bg-black/90">
+            <div class="font-mono text-2xl text-neon-red">SILENT CODE</div>
+            <a href="/home" class="font-mono text-white hover:text-neon-red">Back to Home</a>
+        </nav>
+
+        <div class="pt-24 px-8 pb-16 relative z-10">
+            <ScrambleText 
+					text="SILENT CODE TOOLS"
+					className="font-tech-mono text-center text-2xl md:text-5xl text-neon-red mb-4 text-shadow-lg"
+					client:load
+			/>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Penetration Testing -->
+                <div class="product-card opacity-0 translate-y-4 bg-black p-6 rounded border border-neon-red/20 hover:border-neon-red transition-all duration-300 hover:-translate-y-1 relative group cursor-pointer">
+                    <div class="text-neon-red text-xl mb-2 font-mono">Web Scrapper</div>
+                    <div class="text-neon-red/60 mb-4 font-mono">The Web Scraper is a powerful Python-based tool designed
+                         to extract data from websites with exceptional efficiency. By automating the process of gathering
+                          information from the web, it helps users save significant time and effort. The tool is capable of parsing 
+                          and retrieving various types of content, such as html, css, js, images, videos, audios, etc</div>
+                    <ul class="text-sm text-neon-red/50 mb-4 space-y-2 font-mono">
+                        <li>• Version 1</li>
+                        <li>• Scrape any website you want</li>
+                        <li>• Get all html, css, js files etc</li>
+                        <li>• 2x more faster than any other tool</li>
+                    </ul>
+                    <div class="mt-4 text-neon-red font-mono text-lg">Free</div>
+                    <a href="https://github.com/greenbugx/WebScrapper">
+                        <button class="w-full mt-4 p-3 bg-black border border-neon-red text-neon-red font-mono hover:bg-neon-red hover:text-black transition-all duration-300 rounded group-hover:animate-pulse cursor-pointer">
+                            Get now
+                        </button>
+                    </a>
+                </div>
+
+                <!-- Security Training -->
+                <div class="product-card opacity-0 translate-y-4 bg-black p-6 rounded border border-neon-red/20 hover:border-neon-red transition-all duration-300 hover:-translate-y-1 relative group cursor-pointer">
+                    <div class="text-neon-red text-xl mb-2 font-mono">Web Scrapperv2</div>
+                    <div class="text-neon-red/60 mb-4 font-mono">The <b>Web Scrapper v2.1</b> is a Python-based tool designed to scrape 
+                        and download entire websites, including all associated assets like HTML, CSS, JavaScript, images, 
+                        videos, audios, and fonts. It leverages both <b>requests</b> and <b>Selenium</b> to handle dynamic content 
+                        and provides advanced features for recursive crawling, user-agent spoofing, and error handling.</div>
+                    <ul class="text-sm text-neon-red/50 mb-4 space-y-2 font-mono">
+                        <li>• Version 2</li>
+                        <li>• Scrape the entire website</li>
+                        <li>• Uses Proxies & UserAgents</li>
+                        <li>• 4x more faster than version 1</li>
+                    </ul>
+                    <div class="text-neon-red font-mono text-lg">Free</div>
+                    <a href="https://github.com/greenbugx/WebScrapperv2">
+                        <button class="w-full mt-4 p-3 bg-black border border-neon-red text-neon-red font-mono hover:bg-neon-red hover:text-black transition-all duration-300 rounded group-hover:animate-pulse cursor-pointer">
+                            Get now
+                        </button>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <footer class="py-8 text-center bg-black border-t border-neon-red/20">
+            <p class="text-neon-red/40 font-mono">For detailed pricing and custom solutions, contact our team</p>
+            <a href="mailto:silentcode@privatemx.org" class="text-neon-red font-mono hover:text-neon-red/80">
+                silentcode@privatemx.org
+            </a>
+        </footer>
+    </div>
+</Layout>
+
+<script>
+    // Intersection Observer for fade-in animation
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach((entry, index) => {
+            if (entry.isIntersecting) {
+                // Add delay based on index for staggered animation
+                setTimeout(() => {
+                    entry.target.classList.add('fade-in');
+                }, index * 200); // 200ms delay between each card
+            }
+        });
+    }, {
+        threshold: 0.1,
+        rootMargin: '50px'
+    });
+
+    // Observe all product cards
+    document.querySelectorAll('.product-card').forEach(card => {
+        observer.observe(card);
+    });
+</script>
+
+<style>
+    .product-card {
+        transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+    }
+
+    .product-card.fade-in {
+        opacity: 1;
+        transform: translateY(0);
+    }
+</style>

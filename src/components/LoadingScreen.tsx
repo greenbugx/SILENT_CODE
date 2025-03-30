@@ -128,7 +128,7 @@ export default function LoadingScreen({ onLoadComplete }: { onLoadComplete: () =
     >
       <div className="w-64 text-center">
         <div className="mb-8">
-          <div className="font-tech-mono text-4xl text-neon-green mb-2 animate-pulse">
+          <div className="font-tech-mono text-4xl text-neon-red mb-2 animate-pulse">
             SILENT CODE
           </div>
           <div className="text-sm text-white/80 font-tech-mono h-6">
@@ -138,23 +138,23 @@ export default function LoadingScreen({ onLoadComplete }: { onLoadComplete: () =
         
         <div className="w-full bg-white/10 h-1 rounded-full overflow-hidden">
           <div 
-            className="h-full bg-neon-green transition-all duration-300 rounded-full relative"
+            className="h-full bg-neon-red transition-all duration-300 rounded-full relative"
             style={{ width: `${progress}%` }}
           >
             <div className="absolute inset-0 animate-pulse bg-white/30"></div>
           </div>
         </div>
         
-        <div className="mt-2 text-right text-sm font-tech-mono text-neon-green">
+        <div className="mt-2 text-right text-sm font-tech-mono text-neon-red">
           {Math.round(progress)}%
         </div>
 
         {showLaunchButton && (
           <a
             href="/home"
-            className="mt-8 w-full p-4 bg-black border-2 border-neon-green text-neon-green font-tech-mono 
-                     rounded transition-all duration-300 hover:bg-neon-green hover:text-black
-                     focus:outline-none focus:ring-2 focus:ring-neon-green focus:ring-opacity-50
+            className="mt-8 w-full p-4 bg-black border-2 border-neon-red text-neon-red font-tech-mono 
+                     rounded transition-all duration-300 hover:bg-neon-red hover:text-black
+                     focus:outline-none focus:ring-2 focus:ring-neon-red focus:ring-opacity-50
                      animate-pulse block text-center"
           >
             LAUNCH SYSTEM
@@ -165,10 +165,10 @@ export default function LoadingScreen({ onLoadComplete }: { onLoadComplete: () =
           {[...Array(9)].map((_, i) => (
             <div
               key={i}
-              className="w-full aspect-square bg-black border border-neon-green/30 rounded-sm overflow-hidden"
+              className="w-full aspect-square bg-black border border-neon-red/30 rounded-sm overflow-hidden"
             >
               <div 
-                className="w-full h-full bg-neon-green/10"
+                className="w-full h-full bg-neon-red/50"
                 style={{
                   animation: `glitch ${Math.random() * 2 + 1}s infinite ${Math.random() * 1}s`,
                   opacity: Math.random() * 0.5
