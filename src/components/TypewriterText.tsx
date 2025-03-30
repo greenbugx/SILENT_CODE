@@ -55,7 +55,7 @@ export default function TypewriterText({
             transition: 'opacity 0.1s'
           }}
         >
-          <b>$</b>
+          <strong>$</strong>
         </span>
       )}
     </span>
