@@ -11,7 +11,7 @@ export default function TypewriterText({
   text, 
   className = '', 
   delay = 50,
-  cursorColor = '#FF0F0F'
+  cursorColor = '#00FF00'
 }: Props) {
   const [displayText, setDisplayText] = useState('');
   const [isTypingComplete, setIsTypingComplete] = useState(false);

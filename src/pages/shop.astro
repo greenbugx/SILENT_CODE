@@ -4,131 +4,70 @@ import MatrixRain from '../components/MatrixRain';
 import ScrambleText from '../components/ScrambleText';
 ---
 
-<Layout title="SILENT CODE - Shop">
+<Layout title="GreenBugX - Shop">
     <div class="min-h-screen bg-black">
         <MatrixRain client:load />
         
         <nav class="fixed top-0 w-full flex justify-between items-center px-8 py-4 z-50 bg-black/90">
-            <div class="font-mono text-2xl text-neon-red">SILENT CODE</div>
-            <a href="/home" class="font-mono text-white hover:text-neon-red">Back to Home</a>
+            <div class="font-mono text-2xl text-neon-green">GreenBugX</div>
+            <a href="/home" class="font-mono text-white hover:text-neon-green">Back to Home</a>
         </nav>
 
         <div class="pt-24 px-8 pb-16 relative z-10">
             <ScrambleText 
-					text="SILENT CODE SHOP"
-					className="font-tech-mono text-center text-2xl md:text-5xl text-neon-red mb-4 text-shadow-lg"
+					text="GreenBugX Shop"
+					className="font-tech-mono text-center text-2xl md:text-5xl text-neon-green mb-4 text-shadow-lg"
 					client:load
 			/>
             
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                <!-- Penetration Testing -->
-                <div class="product-card opacity-0 translate-y-4 bg-black p-6 rounded border border-neon-red/20 hover:border-neon-red transition-all duration-300 hover:-translate-y-1 relative group cursor-pointer">
-                    <div class="text-neon-red text-xl mb-2 font-mono">Penetration Testing</div>
-                    <div class="text-neon-red/60 mb-4 font-mono">Comprehensive security assessment</div>
-                    <ul class="text-sm text-neon-red/50 mb-4 space-y-2 font-mono">
-                        <li>• Network vulnerability scanning</li>
-                        <li>• Web application testing</li>
-                        <li>• Social engineering assessment</li>
-                        <li>• Detailed report and remediation</li>
-                    </ul>
-                    <div class="text-neon-red font-mono text-lg">Starting at $359</div>
-                    <button class="w-full mt-4 p-3 bg-black border border-neon-red text-neon-red font-mono hover:bg-neon-red hover:text-black transition-all duration-300 rounded group-hover:animate-pulse cursor-pointer">
-                        Buy now
-                    </button>
-                </div>
-
-                <!-- Security Training -->
-                <div class="product-card opacity-0 translate-y-4 bg-black p-6 rounded border border-neon-red/20 hover:border-neon-red transition-all duration-300 hover:-translate-y-1 relative group cursor-pointer">
-                    <div class="text-neon-red text-xl mb-2 font-mono">VIP Group's</div>
-                    <div class="text-neon-red/60 mb-4 font-mono">Exclusive content's only for the best</div>
-                    <ul class="text-sm text-neon-red/50 mb-4 space-y-2 font-mono">
-                        <li>• LIVE CC's</li>
-                        <li>• BOT NET's</li>
-                        <li>• Paid tool's source code for free</li>
-                        <li>• Pre-recorder classes</li>
-                    </ul>
-                    <div class="text-neon-red font-mono text-lg">Starting at $20/month</div>
-                    <button class="w-full mt-4 p-3 bg-black border border-neon-red text-neon-red font-mono hover:bg-neon-red hover:text-black transition-all duration-300 rounded group-hover:animate-pulse cursor-pointer">
-                        Buy now
-                    </button>
-                </div>
 
                 <!-- Security Audit -->
-                <div class="product-card opacity-0 translate-y-4 bg-black p-6 rounded border border-neon-red/20 hover:border-neon-red transition-all duration-300 hover:-translate-y-1 relative group cursor-pointer">
-                    <div class="text-neon-red text-xl mb-2 font-mono">Proxies (Proxy Server & Residential)</div>
-                    <div class="text-neon-red/60 mb-4 font-mono">UHQ High Bandwidth Proxies</div>
-                    <ul class="text-sm text-neon-red/50 mb-4 space-y-2 font-mono">
+                <div class="product-card opacity-0 translate-y-4 bg-black p-6 rounded border border-neon-green/20 hover:border-neon-green transition-all duration-300 hover:-translate-y-1 relative group cursor-pointer">
+                    <div class="text-neon-green text-xl mb-2 font-mono">Proxies (Proxy Server & Residential)</div>
+                    <div class="text-neon-green/60 mb-4 font-mono">UHQ High Bandwidth Proxies</div>
+                    <ul class="text-sm text-neon-green/50 mb-4 space-y-2 font-mono">
                         <li>• Secure connection</li>
                         <li>• Unlimited Bandwidth(depends on the plan)</li>
                         <li>• 10 UHQ Proxies Free (if you buy a $3 plan)</li>
                         <li>• SOCKS5 & HTTP Proxies</li>
                     </ul>
-                    <div class="text-neon-red font-mono text-lg">Starting at $3 (Contact for more plans)</div>
-                    <button class="w-full mt-4 p-3 bg-black border border-neon-red text-neon-red font-mono hover:bg-neon-red hover:text-black transition-all duration-300 rounded group-hover:animate-pulse cursor-pointer">
-                        Buy now
-                    </button>
-                </div>
-
-                <!-- Incident Response -->
-                <div class="product-card opacity-0 translate-y-4 bg-black p-6 rounded border border-neon-red/20 hover:border-neon-red transition-all duration-300 hover:-translate-y-1 relative group cursor-pointer">
-                    <div class="text-neon-red text-xl mb-2 font-mono">RDP's</div>
-                    <div class="text-neon-red/60 mb-4 font-mono">Secure High Quality RDP's</div>
-                    <ul class="text-sm text-neon-red/50 mb-4 space-y-2 font-mono">
-                        <li>• 24/7 RDP's</li>
-                        <li>• 100% UHQ RDP's</li>
-                        <li>• Connect from anywhere anytime</li>
-                        <li>• Secure & Fast</li>
-                    </ul>
-                    <div class="text-neon-red font-mono text-lg">$15/month</div>
-                    <button class="w-full mt-4 p-3 bg-black border border-neon-red text-neon-red font-mono hover:bg-neon-red hover:text-black transition-all duration-300 rounded group-hover:animate-pulse cursor-pointer">
-                        Buy now
-                    </button>
+                    <div class="text-neon-green font-mono text-lg">Starting at $3 (Contact for more plans)</div>
+                    <a href="mailto:greenbugx@proton.me" target="_blank">
+                        <button class="w-full mt-4 p-3 bg-black border border-neon-green text-neon-green font-mono hover:bg-neon-green hover:text-black transition-all duration-300 rounded group-hover:animate-pulse cursor-pointer">
+                            Buy now
+                        </button>
+                    </a>
                 </div>
 
                 <!-- Custom Security Solutions -->
-                <div class="product-card opacity-0 translate-y-4 bg-black p-6 rounded border border-neon-red/20 hover:border-neon-red transition-all duration-300 hover:-translate-y-1 relative group cursor-pointer">
-                    <div class="text-neon-red text-xl mb-2 font-mono">Lincense Key's</div>
-                    <div class="text-neon-red/60 mb-4 font-mono">All live License Key's of different tools</div>
-                    <ul class="text-sm text-neon-red/50 mb-4 space-y-2 font-mono">
+                <div class="product-card opacity-0 translate-y-4 bg-black p-6 rounded border border-neon-green/20 hover:border-neon-green transition-all duration-300 hover:-translate-y-1 relative group cursor-pointer">
+                    <div class="text-neon-green text-xl mb-2 font-mono">Lincense Key's</div>
+                    <div class="text-neon-green/60 mb-4 font-mono">All live License Key's of different tools</div>
+                    <ul class="text-sm text-neon-green/50 mb-4 space-y-2 font-mono">
                         <li>• Newly created License Key's</li>
                         <li>• Available for various tools</li>
                         <li>• All checked & working</li>
                         <li>• Replacements available</li>
                     </ul>
-                    <div class="text-neon-red font-mono text-lg">Starting at $2</div>
-                    <button class="w-full mt-4 p-3 bg-black border border-neon-red text-neon-red font-mono hover:bg-neon-red hover:text-black transition-all duration-300 rounded group-hover:animate-pulse cursor-pointer">
-                        <a href="mailto:silentcode@privatemx.org">
-                            Contact
-                        </a>
-                    </button>
-                </div>
-
-                <!-- Consultation -->
-                <div class="product-card opacity-0 translate-y-4 bg-black p-6 rounded border border-neon-red/20 hover:border-neon-red transition-all duration-300 hover:-translate-y-1 relative group cursor-pointer">
-                    <div class="text-neon-red text-xl mb-2 font-mono">Bank logs</div>
-                    <div class="text-neon-red/60 mb-4 font-mono">Live Bank Logs of different banks</div>
-                    <ul class="text-sm text-neon-red/50 mb-4 space-y-2 font-mono">
-                        <li>• All checked & working</li>
-                        <li>• Available for different banks</li>
-                        <li>• All UHQ Logs</li>
-                        <li>• All logs are in text format</li>
-                    </ul>
-                    <div class="text-neon-red font-mono text-lg">$60 - $300</div>
-                    <button class="w-full mt-4 p-3 bg-black border border-neon-red text-neon-red font-mono hover:bg-neon-red hover:text-black transition-all duration-300 rounded group-hover:animate-pulse cursor-pointer">
-                        <a href="mailto:silentcode@privatemx.org">
-                            Contact
-                        </a>
-                    </button>
+                    <div class="text-neon-green font-mono text-lg">Starting at $2</div>
+                    <a href="mailto:greenbugx@proton.me">
+                        <button class="w-full mt-4 p-3 bg-black border border-neon-green text-neon-green font-mono hover:bg-neon-green hover:text-black transition-all duration-300 rounded group-hover:animate-pulse cursor-pointer">
+                            Buy now
+                        </button>
+                    </a>
                 </div>
             </div>
         </div>
 
-        <footer class="py-8 text-center bg-black border-t border-neon-red/20">
-            <p class="text-neon-red/40 font-mono">For detailed pricing and custom solutions, contact our team</p>
-            <a href="mailto:silentcode@privatemx.org" class="text-neon-red font-mono hover:text-neon-red/80">
-                silentcode@privatemx.org
-            </a>
-        </footer>
+        <footer class="py-8 text-center bg-dark-bg border-t border-neon-green/10">
+			<div class="mb-4">
+				<a href="https://github.com/greenbugx" class="text-white text-2xl mx-4 hover:text-neon-green transition-colors"><i class="fab fa-github"></i></a>
+				<a href="https://t.me/zerotracetgchat" class="text-white text-2xl mx-4 hover:text-neon-green transition-colors"><i class="fab fa-telegram"></i></a>
+				<a href="https://instagram.com/diku.py" class="text-white text-2xl mx-4 hover:text-neon-green transition-colors"><i class="fab fa-instagram"></i></a>
+			</div>
+			<p>&copy; 2025 GreenBugX. All RIGHTS RESERVED.</p>
+		</footer>
     </div>
 </Layout>
 

@@ -32,8 +32,8 @@ export default function GoToTop() {
       className={`
         fixed bottom-8 right-8 z-50
         bg-black/50 hover:bg-black/80
-        border border-neon-red
-        text-neon-red
+        border border-neon-green
+        text-neon-green
         w-12 h-12
         rounded-full
         flex items-center justify-center

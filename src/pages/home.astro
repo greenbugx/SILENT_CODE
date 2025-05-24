@@ -5,53 +5,44 @@ import ScrambleText from '../components/ScrambleText';
 import TypewriterText from '../components/TypewriterText';
 import ScrollLink from '../components/ScrollLink';
 import GoToTop from '../components/GoToTop';
-import JPG1 from '../assets/a_vibrant_logo_for_green_bug_x.jpeg?url';
-import JPG2 from '../assets/IMG_20250329_121122_782.jpg?url';
-import JPG3 from '../assets/IMG_20250329_121202_248.jpg?url';
-import JPG4 from '../assets/output.jpg?url';
 ---
 
-<Layout title="SILENT CODE">
+<Layout title="Home - GreenBugX">
 	<div id="app" class="opacity-100">
 		<GoToTop client:load />
 		<header class="relative h-screen flex flex-col justify-center items-center text-center px-4 overflow-hidden bg-dark-bg">
 			<MatrixRain client:load />
-			<div class="absolute inset-0 w-[200%] h-[200%] bg-[repeating-linear-gradient(45deg,transparent,transparent_10px,rgba(255,0,0,0.1)_10px,rgba(255,0,0,0.1)_20px)] animate-background-move"></div>
+			<div class="absolute inset-0 w-[200%] h-[200%] bg-[repeating-linear-gradient(45deg,transparent,transparent_10px,rgba(0,255,0,0.1)_10px,rgba(0,255,0,0.1)_20px)] animate-background-move"></div>
 			
 			<nav class="fixed top-0 w-full flex justify-between items-center px-5% py-4 z-50 bg-dark-bg/90">
-				<div class="font-tech-mono text-2xl text-neon-red text-shadow-lg ml-4">SILENT CODE</div>
+				<div class="font-tech-mono text-2xl text-neon-green text-shadow-lg ml-4">GreenbugX</div>
 				
 				<!-- Desktop Navigation -->
 				<ul class="hidden md:flex gap-8 mr-4">
 					<li>
-						<ScrollLink href="#about" className="text-white hover:text-neon-red transition-colors" client:load>
+						<ScrollLink href="#about" className="text-white hover:text-neon-green transition-colors" client:load>
 							About
 						</ScrollLink>
 					</li>
 					<li>
-						<ScrollLink href="#team" className="text-white hover:text-neon-red transition-colors" client:load>
-							Team
-						</ScrollLink>
-					</li>
-					<li>
-						<ScrollLink href="#contact" className="text-white hover:text-neon-red transition-colors" client:load>
+						<ScrollLink href="#contact" className="text-white hover:text-neon-green transition-colors" client:load>
 							Contact
 						</ScrollLink>
 					</li>
 					<li>
-						<a href="/tools" class="text-white hover:text-neon-red transition-colors">
-							Tools
+						<a href="/projects" class="text-white hover:text-neon-green transition-colors">
+							Projects
 						</a>
 					</li>
 					<li>
-						<a href="/shop" class="text-white hover:text-neon-red transition-colors">
+						<a href="/shop" class="text-white hover:text-neon-green transition-colors">
 							Shop
 						</a>
 					</li>
 				</ul>
 			
 				<!-- Mobile Menu Button -->
-				<button id="mobile-menu-button" class="md:hidden text-neon-red p-2 mr-4">
+				<button id="mobile-menu-button" class="md:hidden text-neon-green p-2 mr-4">
 					<svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
 						<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
 					</svg>
@@ -60,7 +51,7 @@ import JPG4 from '../assets/output.jpg?url';
 				<!-- Mobile Navigation -->
 				<div id="mobile-menu" class="fixed top-0 right-0 h-auto max-h-[80vh] w-64 bg-dark-bg/95 backdrop-blur-sm transform translate-x-full transition-transform duration-300 ease-in-out md:hidden rounded-bl-lg shadow-xl overflow-hidden">
 					<div class="flex justify-end p-4">
-						<button id="close-menu" class="text-neon-red p-2">
+						<button id="close-menu" class="text-neon-green p-2">
 							<svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
 								<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
 							</svg>
@@ -68,27 +59,22 @@ import JPG4 from '../assets/output.jpg?url';
 					</div>
 					<ul class="flex flex-col gap-2 px-4 pb-6">
 						<li>
-							<ScrollLink href="#about" className="text-white hover:text-neon-red transition-colors block py-3 px-2 rounded hover:bg-dark-bg/50" client:load>
+							<ScrollLink href="#about" className="text-white hover:text-neon-green transition-colors block py-3 px-2 rounded hover:bg-dark-bg/50" client:load>
 								About
 							</ScrollLink>
 						</li>
 						<li>
-							<ScrollLink href="#team" className="text-white hover:text-neon-red transition-colors block py-3 px-2 rounded hover:bg-dark-bg/50" client:load>
-								Team
-							</ScrollLink>
-						</li>
-						<li>
-							<ScrollLink href="#contact" className="text-white hover:text-neon-red transition-colors block py-3 px-2 rounded hover:bg-dark-bg/50" client:load>
+							<ScrollLink href="#contact" className="text-white hover:text-neon-green transition-colors block py-3 px-2 rounded hover:bg-dark-bg/50" client:load>
 								Contact
 							</ScrollLink>
 						</li>
 						<li>
-							<a href="/tools" class="text-white hover:text-neon-red transition-colors block py-3 px-2 rounded hover:bg-dark-bg/50">
-								Tools
+							<a href="/projects" class="text-white hover:text-neon-green transition-colors block py-3 px-2 rounded hover:bg-dark-bg/50">
+								Projects
 							</a>
 						</li>
 						<li>
-							<a href="/shop" class="text-white hover:text-neon-red transition-colors block py-3 px-2 rounded hover:bg-dark-bg/50">
+							<a href="/shop" class="text-white hover:text-neon-green transition-colors block py-3 px-2 rounded hover:bg-dark-bg/50">
 								Shop
 							</a>
 						</li>
@@ -98,12 +84,12 @@ import JPG4 from '../assets/output.jpg?url';
 
 			<div class="relative z-10">
 				<ScrambleText 
-					text="SILENT CODE TEAM"
-					className="font-tech-mono text-2xl md:text-5xl text-neon-red mb-4 text-shadow-lg"
+					text="GreenBugX"
+					className="font-tech-mono text-2xl md:text-5xl text-neon-green mb-4 text-shadow-lg"
 					client:load
 				/>
 				<TypewriterText 
-					text="Four Experts pushing the limit of digital security"
+					text="Welcome to my portfolio"
 					className="text-lg md:text-xl font-tech-mono text-white"
 					delay={50}
 					client:load
@@ -112,91 +98,40 @@ import JPG4 from '../assets/output.jpg?url';
 		</header>
 
 		<section id="about" class="py-20 px-10% text-center bg-dark-bg">
-			<h2 class="font-tech-mono text-4xl text-neon-red mb-8 text-shadow-lg">About Us</h2>
-			<p class="max-w-2xl mx-auto">
-				We are a covert collective of elite crackers, skilled in infiltrating systems and exploiting weaknesses 
-				with surgical precision. Our mission: to breach the most secure infrastructures and expose their 
-				vulnerabilities before they can be weaponized against the unsuspecting. We operate in the shadows, 
-				where no firewall, no encryption, no defense is safe.
-			</p>
-		</section>
-
-		<section id="team" class="py-20 px-10% bg-dark-bg">
-			<h2 class="font-tech-mono text-4xl text-neon-red mb-12 text-center text-shadow-lg">Our Team</h2>
-			<div class="grid grid-cols-1 md:grid-cols-4 gap-8">
-				<div class="bg-black/30 p-8 rounded-lg text-center transition-transform hover:-translate-y-2.5 border border-neon-red/10 hover:border-neon-red  cursor-pointer">
-					<div class="w-48 h-48 mx-auto mb-6 rounded-full overflow-hidden border-4 border-neon-red">
-						<img src={JPG2} alt="Team Member 1" class="w-full h-full object-cover" />
-					</div>
-					<h3 class="font-tech-mono text-2xl text-neon-red mb-2">Jzchovic "Arthemis78" Portuga</h3>
-					<p class="text-neon-blue mb-4">Penetration Tester</p>
-					<div class="flex flex-wrap gap-2 justify-center">
-						<span class="bg-neon-red/10 px-3 py-1 rounded-full text-sm text-neon-red">Network Security</span>
-						<span class="bg-neon-red/10 px-3 py-1 rounded-full text-sm text-neon-red">Malware Analysis</span>
-						<span class="bg-neon-red/10 px-3 py-1 rounded-full text-sm text-neon-red">Social Engineering</span>
-					</div>
-				</div>
-
-				<div class="bg-black/30 p-8 rounded-lg text-center transition-transform hover:-translate-y-2.5 border border-neon-red/10 hover:border-neon-red  cursor-pointer">
-					<div class="w-48 h-48 mx-auto mb-6 rounded-full overflow-hidden border-4 border-neon-red">
-						<img src={JPG1} alt="Team Member 2" class="w-full h-full object-cover" />
-					</div>
-					<h3 class="font-tech-mono text-2xl text-neon-red mb-2">Jevgenic "GreenBugX" Chernov</h3>
-					<p class="text-neon-blue mb-4">Reverse Engineer & Coder</p>
-					<div class="flex flex-wrap gap-2 justify-center">
-						<span class="bg-neon-red/10 px-3 py-1 rounded-full text-sm text-neon-red">Web App Testing</span>
-						<span class="bg-neon-red/10 px-3 py-1 rounded-full text-sm text-neon-red">Binary Exploitation</span>
-						<span class="bg-neon-red/10 px-3 py-1 rounded-full text-sm text-neon-red">Cryptography</span>
-					</div>
-				</div>
-
-				<div class="bg-black/30 p-8 rounded-lg text-center transition-transform hover:-translate-y-2.5 border border-neon-red/10 hover:border-neon-red  cursor-pointer">
-					<div class="w-48 h-48 mx-auto mb-6 rounded-full overflow-hidden border-4 border-neon-red">
-						<img src={JPG3} alt="Team Member 3" class="w-full h-full object-cover" />
-					</div>
-					<h3 class="font-tech-mono text-2xl text-neon-red mb-2">Marcus "SHAKHAL" Johnson Khuyati</h3>
-					<p class="text-neon-blue mb-4">Cracker & Database Exploiter</p>
-					<div class="flex flex-wrap gap-2 justify-center">
-						<span class="bg-neon-red/10 px-3 py-1 rounded-full text-sm text-neon-red">Bug Bounty</span>
-						<span class="bg-neon-red/10 px-3 py-1 rounded-full text-sm text-neon-red">Database Exploitation</span>
-						<span class="bg-neon-red/10 px-3 py-1 rounded-full text-sm text-neon-red">Threat Modeling</span>
-					</div>
-				</div>
-
-				<div class="bg-black/30 p-8 rounded-lg text-center transition-transform hover:-translate-y-2.5 border border-neon-red/10 hover:border-neon-red  cursor-pointer">
-					<div class="w-48 h-48 mx-auto mb-6 rounded-full overflow-hidden border-4 border-neon-red">
-						<img src={JPG4} alt="Team Member 4" class="w-full h-full object-cover" />
-					</div>
-					<h3 class="font-tech-mono text-2xl text-neon-red mb-2">Milenia "Sylvester" Kuznetsova</h3>
-					<p class="text-neon-blue mb-4">Identity Theft</p>
-					<div class="flex flex-wrap gap-2 justify-center">
-						<span class="bg-neon-red/10 px-3 py-1 rounded-full text-sm text-neon-red">Fake ID Maker</span>
-						<span class="bg-neon-red/10 px-3 py-1 rounded-full text-sm text-neon-red">Doppelgänger</span>
-						<span class="bg-neon-red/10 px-3 py-1 rounded-full text-sm text-neon-red">Deepfake Operator</span>
-					</div>
-				</div>
+			<h2 class="font-tech-mono text-4xl text-neon-green mb-8 text-shadow-lg">About Me</h2>
+			<div class="w-48 h-48 mx-auto mb-6 rounded-full overflow-hidden border-4 border-neon-green">
+				<img src='/images/a_vibrant_logo_for_green_bug_x.jpeg' alt="GreenBugX" class="w-full h-full object-cover" />
 			</div>
+			<p class="max-w-2xl mx-auto mb-4">
+				Hi, I'm GreenBugX, a tech enthusiast passionate about:
+			</p>
+			<ul class="max-w-2xl mx-auto">
+				<li><span class="font-bold underline">UI/UX Design</span>: Crafting visually stunning and user-friendly interfaces.</li>
+				<li><span class="font-bold underline">Web Development</span>: Designing and redesigning websites with modern layouts and vibrant themes.</li>
+				<li><span class="font-bold underline">Desktop App Development</span>: Exploring lightweight solutions for everyday productivity.</li>
+				<li><span class="font-bold underline">Bot Development</span>: Developing bot's for Telegram and Discord.</li>
+			</ul>
 		</section>
 
 		<section id="contact" class="py-20 px-10% bg-dark-bg">
-			<h2 class="font-tech-mono text-4xl text-neon-red mb-12 text-center text-shadow-lg">Get in Touch</h2>
+			<h2 class="font-tech-mono text-4xl text-neon-green mb-12 text-center text-shadow-lg">Get in Touch</h2>
 			<div class="max-w-2xl mx-auto">
 				<form class="flex flex-col gap-4">
-					<input type="text" placeholder="Name" required class="p-4 bg-black/30 border border-neon-red/10 rounded-lg text-white focus:outline-none focus:border-neon-red" />
-					<input type="email" placeholder="Email" required class="p-4 bg-black/30 border border-neon-red/10 rounded-lg text-white focus:outline-none focus:border-neon-red" />
-					<textarea placeholder="Message" required class="p-4 bg-black/30 border border-neon-red/10 rounded-lg text-white h-40 resize-y focus:outline-none focus:border-neon-red"></textarea>
-					<button type="submit" class="p-4 bg-neon-red text-dark-bg font-tech-mono font-bold rounded-lg transition-all hover:bg-neon-red/80 hover:-translate-y-0.5 cursor-pointer">Send Message</button>
+					<input type="text" placeholder="Name" required class="p-4 bg-black/30 border border-neon-green/10 rounded-lg text-white focus:outline-none focus:border-neon-green" />
+					<input type="email" placeholder="Email" required class="p-4 bg-black/30 border border-neon-green/10 rounded-lg text-white focus:outline-none focus:border-neon-green" />
+					<textarea placeholder="Message" required class="p-4 bg-black/30 border border-neon-green/10 rounded-lg text-white h-40 resize-y focus:outline-none focus:border-neon-green"></textarea>
+					<button type="submit" class="p-4 bg-neon-green text-dark-bg font-tech-mono font-bold rounded-lg transition-all hover:bg-neon-green/80 hover:-translate-y-0.5 cursor-pointer">Send Message</button>
 				</form>
 			</div>
 		</section>
 
-		<footer class="py-8 text-center bg-dark-bg border-t border-neon-red/10">
+		<footer class="py-8 text-center bg-dark-bg border-t border-neon-green/10">
 			<div class="mb-4">
-				<a href="https://github.com/greenbugx" class="text-white text-2xl mx-4 hover:text-neon-red transition-colors"><i class="fab fa-github"></i></a>
-				<a href="https://t.me/zerotracetgchat" class="text-white text-2xl mx-4 hover:text-neon-red transition-colors"><i class="fab fa-telegram"></i></a>
-				<a href="#" class="text-white text-2xl mx-4 hover:text-neon-red transition-colors"><i class="fab fa-twitter"></i></a>
+				<a href="https://github.com/greenbugx" class="text-white text-2xl mx-4 hover:text-neon-green transition-colors"><i class="fab fa-github"></i></a>
+				<a href="https://t.me/zerotracetgchat" class="text-white text-2xl mx-4 hover:text-neon-green transition-colors"><i class="fab fa-telegram"></i></a>
+				<a href="https://instagram.com/diku.py" class="text-white text-2xl mx-4 hover:text-neon-green transition-colors"><i class="fab fa-instagram"></i></a>
 			</div>
-			<p>&copy; 2025 SILENT CODE. All RIGHTS RESERVED.</p>
+			<p>&copy; 2025 GreenBugX. All RIGHTS RESERVED.</p>
 		</footer>
 	</div>
 </Layout>
@@ -226,7 +161,7 @@ import JPG4 from '../assets/output.jpg?url';
 
 <style>
 	.text-shadow-lg {
-		text-shadow: 0 0 10px rgba(255, 0, 0, 0.603);
+		text-shadow: 0 0 10px rgba(60, 255,0, 0.603);
 	}
 
 	@keyframes glitch {
