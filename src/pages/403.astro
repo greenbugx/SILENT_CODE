@@ -14,36 +14,36 @@ export const prerender = false;
             <div class="space-y-6 md:space-y-8 w-full max-w-lg mx-auto">
                 <!-- 403 Text with Glitch Effect -->
                 <div class="relative">
-                    <h1 class="text-6xl md:text-9xl font-mono text-neon-red glitch-text">403</h1>
-                    <div class="absolute inset-0 text-6xl md:text-9xl font-mono text-neon-red/20 glitch-text glitch-text--before">403</div>
-                    <div class="absolute inset-0 text-6xl md:text-9xl font-mono text-neon-red/20 glitch-text glitch-text--after">403</div>
+                    <h1 class="text-6xl md:text-9xl font-mono text-neon-green glitch-text">403</h1>
+                    <div class="absolute inset-0 text-6xl md:text-9xl font-mono text-neon-green/20 glitch-text glitch-text--before">403</div>
+                    <div class="absolute inset-0 text-6xl md:text-9xl font-mono text-neon-green/20 glitch-text glitch-text--after">403</div>
                 </div>
 
                 <!-- Security Scan Animation -->
-                <div class="relative h-1.5 md:h-2 w-48 md:w-64 mx-auto bg-black border border-neon-red overflow-hidden">
-                    <div class="absolute top-0 left-0 h-full w-1/4 bg-neon-red animate-scan"></div>
+                <div class="relative h-1.5 md:h-2 w-48 md:w-64 mx-auto bg-black border border-neon-green overflow-hidden">
+                    <div class="absolute top-0 left-0 h-full w-1/4 bg-neon-green animate-scan"></div>
                 </div>
 
                 <!-- Error Message -->
                 <div class="space-y-3 md:space-y-4 px-4">
-                    <h2 class="text-xl md:text-2xl font-mono text-neon-red" id="error-title">ERROR: SECURITY BREACH DETECTED</h2>
-                    <div class="text-sm md:text-base text-neon-red/60 font-mono max-w-md mx-auto" id="error-message">
+                    <h2 class="text-xl md:text-2xl font-mono text-neon-green" id="error-title">ERROR: SECURITY BREACH DETECTED</h2>
+                    <div class="text-sm md:text-base text-neon-green/60 font-mono max-w-md mx-auto" id="error-message">
                         <p>Analyzing suspicious activity...</p>
                     </div>
                 </div>
 
                 <!-- Security Details -->
-                <div class="bg-black/50 border border-neon-red/30 p-3 md:p-4 rounded-lg max-w-md mx-auto">
+                <div class="bg-black/50 border border-neon-green/30 p-3 md:p-4 rounded-lg max-w-md mx-auto">
                     <div class="space-y-2 text-left text-sm md:text-base" id="security-details">
-                        <p class="text-neon-red/80 font-mono">Security Protocol: ACTIVE</p>
-                        <p class="text-neon-red/80 font-mono">Threat Level: ANALYZING</p>
-                        <p class="text-neon-red/80 font-mono">IP Status: SCANNING</p>
+                        <p class="text-neon-green/80 font-mono">Security Protocol: ACTIVE</p>
+                        <p class="text-neon-green/80 font-mono">Threat Level: ANALYZING</p>
+                        <p class="text-neon-green/80 font-mono">IP Status: SCANNING</p>
                     </div>
                 </div>
 
                 <!-- Navigation Buttons -->
                 <div class="flex flex-col sm:flex-row gap-3 md:gap-4 justify-center px-4">
-                    <a href="mailto:silentcode@privatemx.org" class="w-full sm:w-auto px-6 md:px-8 py-2.5 md:py-3 bg-black border border-neon-red text-neon-red text-sm md:text-base font-mono hover:bg-neon-red hover:text-black transition-all duration-300 rounded cursor-pointer">
+                    <a href="mailto:silentcode@privatemx.org" class="w-full sm:w-auto px-6 md:px-8 py-2.5 md:py-3 bg-black border border-neon-green text-neon-green text-sm md:text-base font-mono hover:bg-neon-green hover:text-black transition-all duration-300 rounded cursor-pointer">
                         CONTACT US
                     </a>
                 </div>
@@ -120,9 +120,9 @@ export const prerender = false;
         errorMessage.innerHTML = `<p>${scenario.message}</p>`;
         
         securityDetails.innerHTML = `
-            <p class="text-neon-red/80 font-mono">Security Protocol: ${scenario.details.protocol}</p>
-            <p class="text-neon-red/80 font-mono">Threat Level: ${scenario.details.threat}</p>
-            <p class="text-neon-red/80 font-mono">IP Status: ${scenario.details.status}</p>
+            <p class="text-neon-green/80 font-mono">Security Protocol: ${scenario.details.protocol}</p>
+            <p class="text-neon-green/80 font-mono">Threat Level: ${scenario.details.threat}</p>
+            <p class="text-neon-green/80 font-mono">IP Status: ${scenario.details.status}</p>
         `;
     }
 
